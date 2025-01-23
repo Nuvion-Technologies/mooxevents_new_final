@@ -1,0 +1,44 @@
+/* Custom Animations in your global styles (e.g., index.css or tailwind.css) */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes widthExpand {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Add the animations to Tailwind */
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.animate-widthExpand {
+  animation: widthExpand 1s ease-out forwards;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}

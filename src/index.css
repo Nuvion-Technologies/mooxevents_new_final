@@ -1,0 +1,213 @@
+@import 'swiper/swiper-bundle.css';
+@import './AdminDashboard.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0);
+    }
+
+    to {
+        opacity: 1;
+        backdrop-filter: blur(8px);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        backdrop-filter: blur(8px);
+    }
+
+    to {
+        opacity: 0;
+        backdrop-filter: blur(0);
+    }
+}
+
+@keyframes modalEntry {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateLeftRight {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+    100% {
+      transform: rotate(-2deg);
+    }
+  }
+  
+  .animate-rotateLeftRight {
+    animation: rotateLeftRight 3s infinite ease-in-out;
+  }
+  
+
+.animate-modalEntry {
+    animation: modalEntry 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-scaleIn {
+    animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes photoAppear {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-photoAppear {
+    animation: photoAppear 0.5s ease-in-out;
+  }
+  
+  @keyframes scaleIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-scaleIn {
+    animation: scaleIn 0.3s ease-out;
+  }
+  
+  @keyframes modalEntry {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-modalEntry {
+    animation: modalEntry 0.4s ease-in-out;
+  }
+  
+
+.popup-overlay {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.popup-overlay.closing {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+.popup-content {
+    animation: slideIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.popup-content.closing {
+    animation: slideOut 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.blog-slider .slick-dots {
+    bottom: 20px;
+}
+
+.blog-slider .slick-dots li button:before {
+    color: white;
+    opacity: 0.7;
+    font-size: 8px;
+}
+
+.blog-slider .slick-dots li.slick-active button:before {
+    color: white;
+    opacity: 1;
+}
+
+.blog-slider .slick-prev,
+.blog-slider .slick-next {
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.blog-slider .slick-prev {
+    left: 15px;
+}
+
+.blog-slider .slick-next {
+    right: 15px;
+}
+
+.blog-slider .slick-prev:before,
+.blog-slider .slick-next:before {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.  {
+  scrollbar-width: none; /* Firefox */
+}

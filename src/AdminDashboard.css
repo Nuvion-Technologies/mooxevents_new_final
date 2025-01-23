@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@layer components {
+  .sidebar-button {
+    @apply w-full px-4 py-3 text-left rounded-md transition-all duration-300 ease-in-out;
+  }
+  
+  .sidebar-button-active {
+    @apply bg-white text-blue-800 font-bold shadow-md transform scale-105;
+  }
+  
+  .sidebar-button-inactive {
+    @apply hover:bg-blue-700 hover:scale-102 transform;
+  }
+  
+  .content-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

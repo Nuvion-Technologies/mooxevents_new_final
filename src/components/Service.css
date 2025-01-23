@@ -1,0 +1,215 @@
+/* .flip-card-container {
+    perspective: 1000px; 
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease; 
+    border-radius: 12px; 
+  }
+  
+
+  .flip-card-container:hover .flip-card {
+    transform: rotateY(180deg); 
+  }
+  
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .flip-card-front {
+    background: #fff;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-text {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+
+  .flip-card-back {
+    background: #1a2a47; 
+    color: white;
+    transform: rotateY(180deg); 
+    padding: 16px;
+  }
+  
+  .card-back-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #d6af53; 
+  }
+  
+  .card-points {
+    font-size: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+  }
+  
+  .card-points li {
+    margin-bottom: 8px;
+  }
+  
+  .card-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background: #d6af53;
+    color: #1a2a47; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .card-button:hover {
+    background: #c99d4c; 
+  }
+   */
+
+
+
+
+
+
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr)); /* Responsive grid */
+    gap: 20px;
+  }
+  
+  /* Flip Card Styles */
+  .flip-card-container {
+    perspective: 1000px; /* 3D perspective */
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d; /* Enable 3D transform */
+    transition: transform 0.8s ease; /* Smooth flipping */
+    border-radius: 12px; /* Rounded edges */
+  }
+  
+  .flip-card-container:hover .flip-card {
+    transform: rotateY(180deg); /* Flip the card */
+  }
+  
+  /* Front & Back Shared Styles */
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Prevent mirrored content */
+    border-radius: 12px; /* Rounded edges */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Front Side Styling */
+  .flip-card-front {
+    background: #fff;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-text {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Back Side Styling */
+  .flip-card-back {
+    background: #1a2a47; /* Navy Blue */
+    color: white;
+    transform: rotateY(180deg); /* Rotate back side */
+    padding: 20px;
+  }
+  
+  .card-back-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #d6af53;
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    }
+    
+  }
+  
+  .card-back-status {
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-wrap: wrap;
+  }
+  
+  .card-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background: #d6af53; /* Gold */
+    color: #1a2a47; /* Navy */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .card-button:hover {
+    background: #c99d4c; /* Slightly darker gold */
+  }
+  
